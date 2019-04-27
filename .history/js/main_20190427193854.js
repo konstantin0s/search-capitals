@@ -15,7 +15,6 @@ const searchStates = async searchText => {
 
   if (searchText.length === 0) {
     matches = [];
-    matchList.innerHTML = '';
   } 
   
   outputHtml(matches);
@@ -28,12 +27,10 @@ const outputHtml = matches => {
     <div class="card card-body mb-4">
           <h4>${match.name} (${match.abbr}) 
           <span class="text-primary">${match.capital}</span>
-          <small>Lat: ${match.lat} / Long: ${match.long}</small>
+          <small>Lat: {$match.lat} / Long: ${match.long}</small>
           </h4>
     </div>
-    `).join('');
-
-    matchList.innerHTML = html;
+    `)
   }
 }
 
